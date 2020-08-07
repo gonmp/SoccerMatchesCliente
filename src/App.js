@@ -10,13 +10,15 @@ function App() {
   const [team, setTeam] = useState('');
   const [pageSize, setPageSize] = useState(10);
   const [currentPage, changeCurrentPage] = useState(1);
-  const [header, setHeader] = useState({});
+  const [header, setHeader] = useState({
+    totalCount: 0,
+  });
 
   const searchMatches = async (pageNumber) => {
     const url = `https://soccermatchesapi-apim.azure-api.net/matches/api/Matches/search?team=${team}&pageSize=${pageSize}&pageNumber=${pageNumber}`;
     const results = await axios.get(url);
     setHeader(JSON.parse(results.headers['x-pagination']));
-    console.log(JSON.parse(results.headers['x-pagination']));
+    console.log(JSON.parse(results.headers['x-pagination']).TotalCount);
     setMatches(results.data);
     console.log(matches);
   };
@@ -39,13 +41,12 @@ function App() {
       <div className='paging'>
         <Pagination
           activePage={header.CurrentPage}
-          totalItemsCount={header.TotalCount}
           itemCountPerPage={header.PageSize}
           onChange={handlePaginationChange.bind(this)}
-          itemClass='page-item'
-          itemClass='page-link'
+          itemClass='page-item page-link'
           firstPageText='Primero'
           lastPageText='Último'
+          totalItemsCount={header.TotalCount ? header.TotalCount : 1}
         />
       </div>
     </div>

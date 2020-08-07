@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 
 const TeamForm = ({ setTeam, setPageSize }) => {

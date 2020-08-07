@@ -13,6 +13,9 @@ const TableRow = ({ match }) => {
       case 'DRAW':
         string = 'Empate';
         break;
+      default:
+        string = 'Hubo un error';
+        break;
     }
 
     return string;
