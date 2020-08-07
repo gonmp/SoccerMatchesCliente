@@ -1,24 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+import TeamForm from './components/TeamForm';
+import ResutsTable from './components/ResultsTable';
+import Pagination from 'react-js-pagination';
 
 function App() {
+  const [matches, setMatches] = useState([]);
+  const [team, setTeam] = useState('');
+  const [pageSize, setPageSize] = useState(10);
+  const [currentPage, changeCurrentPage] = useState(1);
+  const [header, setHeader] = useState({});
+
+  const searchMatches = async (pageNumber) => {
+    const url = `https://soccermatchesapi-apim.azure-api.net/matches/api/Matches/search?team=${team}&pageSize=${pageSize}&pageNumber=${pageNumber}`;
+    const results = await axios.get(url);
+    setHeader(JSON.parse(results.headers['x-pagination']));
+    console.log(JSON.parse(results.headers['x-pagination']));
+    setMatches(results.data);
+    console.log(matches);
+  };
+
+  const handlePaginationChange = (pageNumber) => {
+    searchMatches(pageNumber);
+    changeCurrentPage(pageNumber);
+  };
+
+  useEffect(() => {
+    //clienteAxios.get().then((result) => console.log(result));
+    searchMatches(currentPage);
+    //console.log(matches);
+  }, [team, pageSize]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TeamForm setTeam={setTeam} setPageSize={setPageSize} />
+      <ResutsTable matches={matches} />
+      <div className='paging'>
+        <Pagination
+          activePage={header.CurrentPage}
+          totalItemsCount={header.TotalCount}
+          itemCountPerPage={header.PageSize}
+          onChange={handlePaginationChange.bind(this)}
+          itemClass='page-item'
+          itemClass='page-link'
+          firstPageText='Primero'
+          lastPageText='Último'
+        />
+      </div>
     </div>
   );
 }
