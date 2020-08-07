@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26a20e43e1fb054da8d2db39e00a3754",
+    "revision": "5dfba13da0e10a5e662668d19cc8c705",
     "url": "/SoccerMatchesCliente/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SoccerMatchesCliente/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "f72f4f55e09f5cf5bc19",
-    "url": "/SoccerMatchesCliente/static/css/main.74c20fbd.chunk.css"
+    "revision": "b521e927e817d0142ada",
+    "url": "/SoccerMatchesCliente/static/css/main.559b9b4e.chunk.css"
   },
   {
     "revision": "e536b63735ae8258aacf",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SoccerMatchesCliente/static/js/2.c140c881.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f72f4f55e09f5cf5bc19",
+    "revision": "b521e927e817d0142ada",
     "url": "/SoccerMatchesCliente/static/js/main.8e68bc34.chunk.js"
   },
   {
