@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/SoccerMatchesCliente/static/css/main.74c20fbd.chunk.css",
+    "main.js": "/SoccerMatchesCliente/static/js/main.8e68bc34.chunk.js",
+    "main.js.map": "/SoccerMatchesCliente/static/js/main.8e68bc34.chunk.js.map",
+    "runtime-main.js": "/SoccerMatchesCliente/static/js/runtime-main.351ca645.js",
+    "runtime-main.js.map": "/SoccerMatchesCliente/static/js/runtime-main.351ca645.js.map",
+    "static/css/2.11829350.chunk.css": "/SoccerMatchesCliente/static/css/2.11829350.chunk.css",
+    "static/js/2.c140c881.chunk.js": "/SoccerMatchesCliente/static/js/2.c140c881.chunk.js",
+    "static/js/2.c140c881.chunk.js.map": "/SoccerMatchesCliente/static/js/2.c140c881.chunk.js.map",
+    "index.html": "/SoccerMatchesCliente/index.html",
+    "precache-manifest.bdc8581a7b5dd70ae22cc2cd147fb0e3.js": "/SoccerMatchesCliente/precache-manifest.bdc8581a7b5dd70ae22cc2cd147fb0e3.js",
+    "service-worker.js": "/SoccerMatchesCliente/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/SoccerMatchesCliente/static/css/2.11829350.chunk.css.map",
+    "static/css/main.74c20fbd.chunk.css.map": "/SoccerMatchesCliente/static/css/main.74c20fbd.chunk.css.map",
+    "static/js/2.c140c881.chunk.js.LICENSE.txt": "/SoccerMatchesCliente/static/js/2.c140c881.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.351ca645.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.c140c881.chunk.js",
+    "static/css/main.74c20fbd.chunk.css",
+    "static/js/main.8e68bc34.chunk.js"
+  ]
+}
