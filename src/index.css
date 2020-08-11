@@ -25,3 +25,11 @@ h2 {
   background-color: #adb9cd;
   margin: auto;
 }
+
+.pagination > .active {
+  background-color: blue;
+}
+
+.pagination > .active > a {
+  color: white;
+}

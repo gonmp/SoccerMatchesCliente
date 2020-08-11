@@ -9,17 +9,18 @@ const ResultsTable = ({ matches }) => {
         <tr>
           <th>Liga</th>
           <th>Cantidad de equipos</th>
+          <th>Fecha</th>
           <th>Equipo local</th>
           <th>Equipo visitante</th>
           <th>Resultados</th>
           <th>Goles del local</th>
           <th>Goles del vistante</th>
-          <th>Goles del local - TE</th>
-          <th>Goles del visitante - TE</th>
-          <th>Goles del local - 1</th>
-          <th>Goles del visitante - 1</th>
-          <th>Goles del local - 2</th>
-          <th>Goles del visitante - 2</th>
+          <th>Goles del local Tiempo Extra</th>
+          <th>Goles del visitante Tiempo Extra</th>
+          <th>Goles del local Primera Mitad</th>
+          <th>Goles del visitante Primera Mitad</th>
+          <th>Goles del local Segunda Mitad</th>
+          <th>Goles del visitante Segunda Mitad</th>
         </tr>
       </thead>
       <tbody>

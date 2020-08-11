@@ -43,10 +43,12 @@ function App() {
           activePage={header.CurrentPage}
           itemCountPerPage={header.PageSize}
           onChange={handlePaginationChange.bind(this)}
+          innerClass='pagination justify-content-center'
           itemClass='page-item page-link'
           firstPageText='Primero'
           lastPageText='Último'
           totalItemsCount={header.TotalCount ? header.TotalCount : 1}
+          activeClass='active'
         />
       </div>
     </div>

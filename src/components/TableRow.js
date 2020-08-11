@@ -28,10 +28,19 @@ const TableRow = ({ match }) => {
 
     return goals;
   };
+
+  const showDate = (date) => {
+    var dateElements = date.split('-');
+    var dayElements = dateElements[2].split('T');
+
+    return `${dayElements[0]}/${dateElements[1]}/${dateElements[0]}`;
+  };
+
   return (
     <tr>
       <td>{match.league}</td>
       <td>{match.numberTeamsLeague}</td>
+      <td>{showDate(match.date)}</td>
       <td>{match.homeTeam}</td>
       <td>{match.awayTeam}</td>
       <td>{showResults(match.result)}</td>
